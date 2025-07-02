@@ -1,16 +1,7 @@
 - name: Проверка соединения с нодой2
   hosts: NexCloud
   tasks:
-    - name: Пинг для проверки подключения
-      ping:
-
-    - name: Обновить кэш apt
-      apt:
-        update_cache: yes
-      become: true
-
-    - name: Установить пакет `btop`
-      apt:
-        name: btop
-        state: present
-      become: true
+- name: Обновить кэш apt
+  apt:
+    update_cache: yes
+  become: true
