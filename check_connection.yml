@@ -4,7 +4,11 @@
     - name: Пинг для проверки подключения
       ping:
 
-    - name: Обновить кэш apt
+    - name: Задержка перед обновлением apt
+      pause:
+        seconds: 30
+
+    - name: Принудительное обновление кэша apt
       apt:
         update_cache: yes
       become: true
