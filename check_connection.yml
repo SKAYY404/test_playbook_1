@@ -1,5 +1,10 @@
-- name: Проверка соединения с нодой
-  hosts: all
+- name: Check connection to nodes
+  hosts: NexCloud
   tasks:
-    - name: Пинг до ноды
+    - name: Ping to check connectivity
       ping:
+    - name: Установить пакет `btop`
+      apt:
+        name: btop
+        state: present
+        update_cache: yes
