@@ -8,3 +8,4 @@
         name: btop
         state: present
         update_cache: yes
+        ansible_become: true
